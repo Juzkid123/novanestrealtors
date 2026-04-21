@@ -1,9 +1,8 @@
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
-import LeadForm from '@/components/lead-form'
-import { services } from '@/lib/data'
 import Link from 'next/link'
+import { Search, FileText, BarChart2, Home, TrendingUp, Users } from 'lucide-react'
 
 export default function ServicesPage() {
   const serviceDetails = [
@@ -11,7 +10,7 @@ export default function ServicesPage() {
       id: '1',
       title: 'Property Search & Advisory',
       description: 'Expert guidance to find the perfect property matching your investment criteria and budget.',
-      icon: '🔍',
+      icon: <Search className="w-10 h-10 text-accent" />,
       details: [
         'Personalized property recommendations based on your goals',
         'Market analysis and trend reports',
@@ -23,7 +22,7 @@ export default function ServicesPage() {
       id: '2',
       title: 'Legal Documentation',
       description: 'Complete assistance with contracts, titles, and all legal requirements for secure transactions.',
-      icon: '📋',
+      icon: <FileText className="w-10 h-10 text-accent" />,
       details: [
         'Contract review and negotiation',
         'Title verification and registration',
@@ -35,7 +34,7 @@ export default function ServicesPage() {
       id: '3',
       title: 'Investment Analysis',
       description: 'Comprehensive ROI projections and market analysis for data-driven investment decisions.',
-      icon: '📊',
+      icon: <BarChart2 className="w-10 h-10 text-accent" />,
       details: [
         'ROI and financial projections',
         'Market trend analysis',
@@ -47,7 +46,7 @@ export default function ServicesPage() {
       id: '4',
       title: 'Property Management',
       description: 'Full property management services including maintenance, rentals, and tenant relations.',
-      icon: '🏠',
+      icon: <Home className="w-10 h-10 text-accent" />,
       details: [
         'Tenant screening and placement',
         'Rent collection and financial reporting',
@@ -59,7 +58,7 @@ export default function ServicesPage() {
       id: '5',
       title: 'Market Research',
       description: 'Stay updated with detailed market reports and emerging investment opportunities.',
-      icon: '📈',
+      icon: <TrendingUp className="w-10 h-10 text-accent" />,
       details: [
         'Quarterly market reports',
         'Neighborhood analysis',
@@ -71,15 +70,22 @@ export default function ServicesPage() {
       id: '6',
       title: 'Concierge Services',
       description: 'Personalized support for all your real estate needs and property-related inquiries.',
-      icon: '👥',
+      icon: <Users className="w-10 h-10 text-accent" />,
       details: [
-        ' 24/7 client support',
+        '24/7 client support',
         'Property viewing coordination',
         'Travel and accommodation arrangements',
         'Lifestyle and location guidance',
       ],
     },
   ]
+
+  const services = serviceDetails.map((s) => ({
+    id: s.id,
+    title: s.title,
+    description: s.description,
+    icon: s.icon,
+  }))
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -106,7 +112,7 @@ export default function ServicesPage() {
                 key={service.id}
                 className="bg-card border border-border rounded-lg p-8 hover:border-accent/50 transition-all duration-300 hover:shadow-lg"
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
+                <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {service.title}
                 </h3>
@@ -125,13 +131,13 @@ export default function ServicesPage() {
           </h2>
 
           <div className="space-y-12">
-            {serviceDetails.map((service, idx) => (
+            {serviceDetails.map((service) => (
               <div
                 key={service.id}
                 className="bg-card border border-border rounded-lg p-8 md:p-12"
               >
                 <div className="flex items-start gap-6 mb-6">
-                  <div className="text-5xl flex-shrink-0">{service.icon}</div>
+                  <div className="flex-shrink-0">{service.icon}</div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                       {service.title}
@@ -163,26 +169,10 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              {
-                step: '01',
-                title: 'Consultation',
-                description: 'We discuss your goals, budget, and preferences',
-              },
-              {
-                step: '02',
-                title: 'Property Search',
-                description: 'We identify properties that match your criteria',
-              },
-              {
-                step: '03',
-                title: 'Negotiation',
-                description: 'We handle negotiations and documentation',
-              },
-              {
-                step: '04',
-                title: 'Closing',
-                description: 'Finalize the transaction and take ownership',
-              },
+              { step: '01', title: 'Consultation', description: 'We discuss your goals, budget, and preferences' },
+              { step: '02', title: 'Property Search', description: 'We identify properties that match your criteria' },
+              { step: '03', title: 'Negotiation', description: 'We handle negotiations and documentation' },
+              { step: '04', title: 'Closing', description: 'Finalize the transaction and take ownership' },
             ].map((item, idx) => (
               <div key={idx} className="relative">
                 <div className="bg-card border border-border rounded-lg p-6 text-center h-full flex flex-col justify-center">
@@ -213,7 +203,6 @@ export default function ServicesPage() {
             <p className="text-lg text-primary-foreground/90 mb-8">
               Let our expert team guide you through every step of your real estate investment journey.
             </p>
-
             <div className="space-y-3">
               <a
                 href="https://wa.me/233200000000?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
@@ -231,7 +220,6 @@ export default function ServicesPage() {
               </Link>
             </div>
           </div>
-
           <div className="flex items-center">
             <img
               src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80"

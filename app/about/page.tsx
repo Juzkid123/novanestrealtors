@@ -9,23 +9,23 @@ export default function AboutPage() {
   const teamMembers = [
     {
       name: 'Michael A. Kweku',
-      role: 'Senior Real Estate Consultant',
+      role: 'Co-founder',
       bio: 'Dedicated real estate professional specializing in property investment and client relations.',
       image: '/team-michael.jpg',
       linkedin: 'https://linkedin.com/in/michael-kweku',
     },
     {
       name: 'Essuman Samuel',
-      role: 'Property Development Specialist',
+      role: 'Co-founder',
       bio: 'Expert in property development and market analysis with comprehensive industry knowledge.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
+      image: '/placeholder-user.jpg',
       linkedin: 'https://linkedin.com/in/essuman-samuel',
     },
     {
       name: 'Justice Liassidzi',
-      role: 'Investment Advisor',
+      role: 'Co-founder',
       bio: 'Strategic investment consultant helping clients make informed real estate decisions.',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
+      image: '/placeholder-user.jpg',
       linkedin: 'https://linkedin.com/in/justice-liassidzi',
     },
   ]

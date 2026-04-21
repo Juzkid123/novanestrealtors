@@ -31,15 +31,15 @@ export default function Navigation() {
   return (
     <nav className="sticky top-0 z-50 bg-background border-b-2 border-accent/30 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image
               src="/logo.png"
               alt="NovaNest Realtors"
-              width={180}
-              height={100}
-              className="h-20 w-auto"
+              width={220}
+              height={120}
+              className="h-24 w-auto"
             />
           </Link>
 
