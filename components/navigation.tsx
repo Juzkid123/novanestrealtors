@@ -33,7 +33,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0 z-40">
             <Image
               src="/logo.png"
               alt="NovaNest Realtors"
@@ -100,44 +100,54 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-accent/10 transition-colors"
+            className="md:hidden flex items-center justify-center w-12 h-12 rounded-lg hover:bg-accent/10 transition-colors z-50 relative cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            type="button"
           >
-            {isOpen ? (
-              <X className="w-8 h-8 text-accent" />
-            ) : (
-              <Menu className="w-8 h-8 text-accent" />
-            )}
+            <div className="flex flex-col gap-1.5 w-6 h-6">
+              <span className={`block h-1 bg-accent rounded transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`block h-1 bg-accent rounded transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block h-1 bg-accent rounded transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </div>
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col gap-3">
+          <div className="md:hidden fixed left-0 right-0 top-28 bg-background border-b-2 border-accent/30 z-40 py-4 px-4 sm:px-6 max-h-96 overflow-y-auto">
+            <div className="flex flex-col gap-4 max-w-7xl mx-auto">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-black px-3 py-2 rounded-lg transition-colors duration-200 ${
+                  className={`text-base font-black px-4 py-3 rounded-lg transition-all duration-200 ${
                     isActive(link.href) 
                       ? 'text-accent bg-accent/10 border-l-4 border-accent' 
-                      : 'text-foreground hover:text-accent hover:bg-muted'
+                      : 'text-foreground hover:text-accent hover:bg-accent/5'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <a
-                href="https://wa.me/233200000000?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors duration-200 text-sm font-medium text-center"
-              >
-                WhatsApp
-              </a>
+              <div className="pt-2 border-t border-border">
+                <Link
+                  href="/book-consultation"
+                  className="block px-4 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors text-center font-semibold mb-3"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Book a Consultation
+                </Link>
+                <a
+                  href="https://wa.me/233200000000?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors text-center font-semibold"
+                >
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         )}
