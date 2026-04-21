@@ -57,6 +57,7 @@ const staggerContainer = {
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,10 +107,83 @@ export default function Home() {
             Book a Consultation
           </button>
 
-          <button className="md:hidden text-accent">
-            <Building2 size={24} />
+          {/* Mobile Hamburger Menu Button */}
+          <button
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden flex flex-col justify-center items-center gap-1.5 w-12 h-12 rounded-lg hover:bg-accent/10 transition-colors z-50 relative cursor-pointer"
+          >
+            <span
+              style={{
+                display: 'block',
+                width: '24px',
+                height: '2px',
+                backgroundColor: 'currentColor',
+                borderRadius: '2px',
+                transition: 'transform 0.25s, opacity 0.25s',
+                transform: mobileOpen ? 'translateY(8px) rotate(45deg)' : 'none',
+                color: '#C9A84C'
+              }}
+            />
+            <span
+              style={{
+                display: 'block',
+                width: '24px',
+                height: '2px',
+                backgroundColor: 'currentColor',
+                borderRadius: '2px',
+                transition: 'opacity 0.25s',
+                opacity: mobileOpen ? 0 : 1,
+                color: '#C9A84C'
+              }}
+            />
+            <span
+              style={{
+                display: 'block',
+                width: '24px',
+                height: '2px',
+                backgroundColor: 'currentColor',
+                borderRadius: '2px',
+                transition: 'transform 0.25s, opacity 0.25s',
+                transform: mobileOpen ? 'translateY(-8px) rotate(-45deg)' : 'none',
+                color: '#C9A84C'
+              }}
+            />
           </button>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {mobileOpen && (
+          <div className="md:hidden bg-background border-t border-border px-6 py-5 flex flex-col gap-4 absolute top-16 left-0 right-0 z-40">
+            <Link href="/listings" className="text-sm font-semibold text-foreground hover:text-accent transition-colors" onClick={() => setMobileOpen(false)}>
+              Properties
+            </Link>
+            <Link href="/buy-and-build" className="text-sm font-semibold text-foreground hover:text-accent transition-colors" onClick={() => setMobileOpen(false)}>
+              Buy
+            </Link>
+            <Link href="/sell-property" className="text-sm font-semibold text-foreground hover:text-accent transition-colors" onClick={() => setMobileOpen(false)}>
+              Sell
+            </Link>
+            <Link href="/about" className="text-sm font-semibold text-foreground hover:text-accent transition-colors" onClick={() => setMobileOpen(false)}>
+              About
+            </Link>
+            <Link href="#" className="text-sm font-semibold text-foreground hover:text-accent transition-colors" onClick={() => setMobileOpen(false)}>
+              Market Insights
+            </Link>
+            <Link href="/contact" className="text-sm font-semibold text-foreground hover:text-accent transition-colors" onClick={() => setMobileOpen(false)}>
+              Contact
+            </Link>
+            <a
+              href="/book-consultation"
+              className="px-4 py-3 bg-accent text-primary font-semibold rounded text-sm text-center hover:bg-accent/90 transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              Book a Consultation
+            </a>
+          </div>
+        )}
       </nav>
 
       {/* HERO SECTION */}
