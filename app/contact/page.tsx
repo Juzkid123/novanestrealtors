@@ -10,7 +10,7 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-20">
+      <section className="bg-linear-to-b from-primary/5 to-background py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Get in Touch
@@ -30,17 +30,31 @@ export default function ContactPage() {
               {/* Phone */}
               <div className="bg-card border border-border rounded-lg p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                    <a
-                      href="tel:+233200000000"
-                      className="text-accent hover:text-accent/80 transition-colors"
-                    >
-                      +233 (0) 20 000 0000
-                    </a>
+                    <h3 className="font-semibold text-foreground mb-2">Phone</h3>
+                    <div className="space-y-2">
+                      <a
+                        href="tel:+233596805265"
+                        className="block text-accent hover:text-accent/80 transition-colors"
+                      >
+                        +233 59 680 5265
+                      </a>
+                      <a
+                        href="tel:+233549589563"
+                        className="block text-accent hover:text-accent/80 transition-colors"
+                      >
+                        +233 54 958 9563
+                      </a>
+                      <a
+                        href="tel:+233595320299"
+                        className="block text-accent hover:text-accent/80 transition-colors"
+                      >
+                        +233 59 532 0299
+                      </a>
+                    </div>
                     <p className="text-xs text-muted-foreground mt-2">
                       Available Mon-Fri, 9am-6pm GMT
                     </p>
@@ -51,16 +65,16 @@ export default function ContactPage() {
               {/* Email */}
               <div className="bg-card border border-border rounded-lg p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
                     <a
-                      href="mailto:info@novanest.com"
+                      href="mailto:novanestrealtors@gmail.com"
                       className="text-accent hover:text-accent/80 transition-colors"
                     >
-                      info@novanest.com
+                      novanestrealtors@gmail.com
                     </a>
                     <p className="text-xs text-muted-foreground mt-2">
                       Response within 24 hours
@@ -72,7 +86,7 @@ export default function ContactPage() {
               {/* Address */}
               <div className="bg-card border border-border rounded-lg p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                     <MapPin className="w-6 h-6 text-accent" />
                   </div>
                   <div>
@@ -88,7 +102,7 @@ export default function ContactPage() {
               {/* Business Hours */}
               <div className="bg-card border border-border rounded-lg p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                     <Clock className="w-6 h-6 text-accent" />
                   </div>
                   <div>
@@ -113,7 +127,7 @@ export default function ContactPage() {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/233200000000?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
+                href="https://wa.me/233596805265?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors text-center block"

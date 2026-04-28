@@ -191,7 +191,7 @@ export default function LeadForm({
         </div>
 
         <a
-          href="https://wa.me/233200000000?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
+          href="https://wa.me/233596805265?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full bg-accent text-accent-foreground py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors text-center block"

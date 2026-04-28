@@ -11,21 +11,21 @@ export default function AboutPage() {
       name: 'Michael A. Kweku',
       role: 'Co-founder',
       bio: 'Dedicated real estate professional specializing in property investment and client relations.',
-      image: '/team-michael.jpg',
+      image: '/team-michael.jpeg',
       linkedin: 'https://linkedin.com/in/michael-kweku',
     },
     {
       name: 'Essuman Samuel',
       role: 'Co-founder',
       bio: 'Expert in property development and market analysis with comprehensive industry knowledge.',
-      image: '/placeholder-user.jpg',
+      image: '/team-samuel.jpeg',
       linkedin: 'https://linkedin.com/in/essuman-samuel',
     },
     {
       name: 'Justice Liassidzi',
       role: 'Co-founder',
       bio: 'Strategic investment consultant helping clients make informed real estate decisions.',
-      image: '/placeholder-user.jpg',
+      image: '/team-justice.jpeg',
       linkedin: 'https://linkedin.com/in/justice-liassidzi',
     },
   ]
@@ -35,7 +35,7 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-20">
+      <section className="bg-linear-to-b from-primary/5 to-background py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -136,11 +136,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, idx) => (
               <div key={idx} className="bg-card border border-border rounded-lg overflow-hidden hover:border-accent/50 transition-colors duration-200">
-                <div className="h-48 overflow-hidden">
+                <div className="h-96 overflow-hidden bg-muted/30">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-6">
@@ -171,28 +171,9 @@ export default function AboutPage() {
             Client Success Stories
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
               <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 md:py-28 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: '500+', label: 'Properties Listed' },
-              { number: '1000+', label: 'Happy Clients' },
-              { number: '$500M+', label: 'Investment Volume' },
-              { number: '6+', label: 'Years in Business' },
-            ].map((stat, idx) => (
-              <div key={idx}>
-                <p className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</p>
-                <p className="text-primary-foreground/80">{stat.label}</p>
-              </div>
             ))}
           </div>
         </div>

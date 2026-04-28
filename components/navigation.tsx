@@ -33,7 +33,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0 z-40">
+          <Link href="/" className="flex items-center gap-3 shrink-0 z-40">
             <Image
               src="/logo.png"
               alt="NovaNest Realtors"
@@ -81,18 +81,18 @@ export default function Navigation() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex gap-3">
+          <div className="hidden md:flex gap-3 items-center">
             <Link
               href="/book-consultation"
-              className="px-6 py-2 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors duration-200 text-sm font-semibold"
+              className="px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all duration-200 text-sm font-semibold whitespace-nowrap"
             >
               Book a Consultation
             </Link>
             <a
-              href="https://wa.me/233200000000?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
+              href="https://wa.me/233596805265?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 border border-accent text-accent rounded-lg hover:bg-accent/10 transition-colors duration-200 text-sm font-medium"
+              className="px-6 py-3 border border-accent text-accent rounded-lg hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all duration-200 text-sm font-medium whitespace-nowrap"
             >
               WhatsApp
             </a>
@@ -140,7 +140,7 @@ export default function Navigation() {
                   Book a Consultation
                 </Link>
                 <a
-                  href="https://wa.me/233200000000?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
+                  href="https://wa.me/233596805265?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block px-4 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors text-center font-semibold"

@@ -92,7 +92,7 @@ export default function ServicesPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-20">
+      <section className="bg-linear-to-b from-primary/5 to-background py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our Services
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                 className="bg-card border border-border rounded-lg p-8 md:p-12"
               >
                 <div className="flex items-start gap-6 mb-6">
-                  <div className="flex-shrink-0">{service.icon}</div>
+                  <div className="shrink-0">{service.icon}</div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                       {service.title}
@@ -205,7 +205,7 @@ export default function ServicesPage() {
             </p>
             <div className="space-y-3">
               <a
-                href="https://wa.me/233200000000?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
+                href="https://wa.me/233596805265?text=Hello%20NovaNest%2C%20I%20want%20to%20discuss%20real%20estate%20opportunities"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors text-center"

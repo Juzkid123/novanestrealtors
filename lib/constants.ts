@@ -5,14 +5,14 @@ export const COMPANY_DESCRIPTION = 'Your trusted real estate partner worldwide'
 
 // Contact Information
 export const CONTACT = {
-  phone: '+233 XX XXX XXXX',
-  email: 'hello@novanestreal.com',
-  whatsapp: '+233XXXXXXXXX',
+  phone: '+233 59 680 5265',
+  email: 'novanestrealtors@gmail.com',
+  whatsapp: '+233596805265',
   address: 'Accra, Ghana',
 }
 
 // WhatsApp Configuration
-export const WHATSAPP_NUMBER = '233XXXXXXXXX' // Without the + or leading 0
+export const WHATSAPP_NUMBER = '233596805265' // Without the + or leading 0
 export const WHATSAPP_MESSAGE_TEMPLATE = `Hello! I'm interested in learning more about NovaNest Realtors' services and properties.`
 
 // Social Links

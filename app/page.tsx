@@ -188,7 +188,7 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen pt-24 pb-12 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary to-background opacity-40" />
+        <div className="absolute inset-0 bg-linear-to-b from-primary via-primary to-background opacity-40" />
 
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
@@ -505,7 +505,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
           </motion.div>
 
-          <motion.div variants={staggerContainer} className="space-y-8">
+          <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-8">
             {[
               {
                 quote: 'NovaNest transformed my real estate investment journey. Their expertise and dedication are unmatched.',
@@ -607,8 +607,8 @@ export default function Home() {
           >
             {[
               { icon: MapPin, label: 'Address', value: 'Accra, Ghana' },
-              { icon: Phone, label: 'Phone', value: '+233 XXX XXXX' },
-              { icon: Mail, label: 'Email', value: 'hello@novanestreal.com' },
+              { icon: Phone, label: 'Phone', value: '+233 59 680 5265' },
+              { icon: Mail, label: 'Email', value: 'novanestrealtors@gmail.com' },
             ].map((contact, idx) => (
               <motion.div key={idx} variants={fadeInUp} className="text-center">
                 <contact.icon size={32} className="mx-auto mb-3 text-accent" />

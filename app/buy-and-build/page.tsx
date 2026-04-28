@@ -55,7 +55,7 @@ export default function BuyAndBuildPage() {
             <a href="#process" className="px-8 py-3 bg-accent text-primary font-semibold rounded hover:bg-accent/90 transition-all">
               Learn More
             </a>
-            <a href="https://wa.me/233200000000?text=I%20am%20interested%20in%20buying%20land%20and%20building%20a%20property" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-accent text-accent font-semibold rounded hover:bg-accent/10 transition-all">
+            <a href="https://wa.me/233596805265?text=I%20am%20interested%20in%20buying%20land%20and%20building%20a%20property" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-accent text-accent font-semibold rounded hover:bg-accent/10 transition-all">
               Get Started
             </a>
           </motion.div>
@@ -166,7 +166,7 @@ export default function BuyAndBuildPage() {
                       <Icon className="w-8 h-8 text-accent" />
                     </div>
                   </div>
-                  <div className="flex-grow pt-2">
+                  <div className="grow pt-2">
                     <div className="text-accent font-bold text-lg mb-2">{item.step}</div>
                     <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
                     <p className="text-muted-foreground text-lg">{item.description}</p>
@@ -204,7 +204,7 @@ export default function BuyAndBuildPage() {
                 'Complete creative control'
               ].map((benefit, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
-                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-6 h-6 text-accent shrink-0 mt-0.5" />
                   <span className="text-lg">{benefit}</span>
                 </div>
               ))}
@@ -221,7 +221,7 @@ export default function BuyAndBuildPage() {
               <p className="text-muted-foreground mb-8">
                 Our expert team is ready to help you find the perfect land and guide you through the entire building process.
               </p>
-              <a href="https://wa.me/233200000000?text=I%20want%20to%20discuss%20a%20buy%20and%20build%20project" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 bg-accent text-primary font-semibold rounded hover:bg-accent/90 transition-all">
+              <a href="https://wa.me/233596805265?text=I%20want%20to%20discuss%20a%20buy%20and%20build%20project" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 bg-accent text-primary font-semibold rounded hover:bg-accent/90 transition-all">
                 Contact Our Team
               </a>
             </motion.div>

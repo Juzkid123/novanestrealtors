@@ -90,15 +90,19 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
-                <Phone className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>+233 (0) 20 000 0000</span>
+                <Phone className="w-4 h-4 mt-1 shrink-0" />
+                <div>
+                  <p>+233 59 680 5265</p>
+                  <p>+233 54 958 9563</p>
+                  <p>+233 59 532 0299</p>
+                </div>
               </div>
               <div className="flex items-start gap-2">
-                <Mail className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>info@novanest.com</span>
+                <Mail className="w-4 h-4 mt-1 shrink-0" />
+                <span>novanestrealtors@gmail.com</span>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <MapPin className="w-4 h-4 mt-1 shrink-0" />
                 <span>Accra, Ghana</span>
               </div>
             </div>

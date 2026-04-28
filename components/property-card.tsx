@@ -24,7 +24,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
     e.preventDefault()
     e.stopPropagation()
     window.open(
-      `https://wa.me/233200000000?text=I%20am%20interested%20in%20${property.title}`,
+      `https://wa.me/233596805265?text=I%20am%20interested%20in%20${property.title}`,
       '_blank'
     )
   }
